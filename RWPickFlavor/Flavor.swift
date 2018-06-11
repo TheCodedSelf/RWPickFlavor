@@ -1,10 +1,30 @@
-//
-//  Flavor.swift
-//  IceCreamShop
-//
-//  Created by Joshua Greene on 1/16/15.
-//  Copyright (c) 2015 Razeware, LLC. All rights reserved.
-//
+/// Copyright (c) 2018 Razeware LLC
+///
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+///
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+///
+/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+/// distribute, sublicense, create a derivative work, and/or sell copies of the
+/// Software in any work that is designed, intended, or marketed for pedagogical or
+/// instructional purposes related to programming, coding, application development,
+/// or information technology.  Permission for such use, copying, modification,
+/// merger, publication, distribution, sublicensing, creation of derivative works,
+/// or sale is expressly withheld.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
 
 import UIKit
 
@@ -19,11 +39,15 @@ struct Flavor {
   // MARK: Static Methods
   
   static func vanilla() -> Flavor {
-    return Flavor(name:"Vanilla", topColor:RGB(251, green: 248, blue: 236), bottomColor:RGB(230, green: 215, blue: 171))
+    return Flavor(name:"Vanilla",
+                  topColor:UIColor.RGB(red: 251, green: 248, blue: 236),
+                  bottomColor:UIColor.RGB(red: 230, green: 215, blue: 171))
   }
   
   static func chocolate() -> Flavor {
-    return Flavor(name:"Chocolate", topColor:RGB(203, green: 140, blue: 58), bottomColor:RGB(107, green: 46, blue: 11))
+    return Flavor(name:"Chocolate",
+                  topColor:UIColor.RGB(red: 203, green: 140, blue: 58),
+                  bottomColor:UIColor.RGB(red: 107, green: 46, blue: 11))
   }
   
   // MARK: Initializers
@@ -36,34 +60,20 @@ struct Flavor {
   
   init?(dictionary: [String: String]) {
     
-    let topColorString = dictionary["topColor"]
-    
-    if let topColor = UIColor.RGBAColorFromString(topColorString) {
-      self.topColor = topColor
-      
-    } else {
-      return nil
+    guard let topColor = UIColor.RGBAColorFromString(string: dictionary["topColor"]),
+      let bottomColor = UIColor.RGBAColorFromString(string: dictionary["bottomColor"]),
+      let name = dictionary["name"] else {
+        return nil
     }
     
-    let bottomColorString = dictionary["bottomColor"]
+    self.topColor = topColor
+    self.bottomColor = bottomColor
+    self.name = name
     
-    if let bottomColor = UIColor.RGBAColorFromString(bottomColorString) {
-      self.bottomColor = bottomColor
-      
-    } else {
-      return nil
-    }
-    
-    if let name = dictionary["name"] {
-      self.name = name
-      
-    } else {
-      return nil
-    }
   }
 }
 
 protocol FlavorAdapter {
   
-  func updateWithFlavor(flavor: Flavor)
+  func updateWithFlavor(_: Flavor)
 }
