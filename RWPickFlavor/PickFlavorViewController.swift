@@ -35,7 +35,6 @@ public class PickFlavorViewController: UIViewController {
   // MARK: Instance Variables
   
   var flavors: [Flavor] = [] {
-    
     didSet {
       pickFlavorDataSource?.flavors = flavors
     }
@@ -44,8 +43,6 @@ public class PickFlavorViewController: UIViewController {
   private var pickFlavorDataSource: PickFlavorDataSource? {
     return collectionView?.dataSource as? PickFlavorDataSource
   }
-  
-  private let flavorFactory = FlavorFactory()
   
   // MARK: Outlets
   
@@ -57,44 +54,35 @@ public class PickFlavorViewController: UIViewController {
   // MARK: View Lifecycle
   
   public override func viewDidLoad() {
-    
     super.viewDidLoad()
     loadFlavors()
   }
   
   private func loadFlavors() {
     
-    showLoadingHUD()  // <-- Add this line
+    showLoadingHUD()
     
-    // 1
     Alamofire.request("http://www.raywenderlich.com/downloads/Flavors.plist",
                       encoding: PropertyListEncoding.xml)
       .responsePropertyList { [weak self] (response) -> Void in
         
-        // 2
         guard let strongSelf = self else {
           return
         }
         
-        strongSelf.hideLoadingHUD()  // <-- Add this line
+        strongSelf.hideLoadingHUD()
         
-        var flavorsArray: [[String : String]] = []
+        let flavorsArray: [[String : String]]
         
-        // 3
         switch response.result {
-          
         case .success(let array):
-          if let array = array as? [[String : String]] {
-            flavorsArray = array
-          }
-          
+            flavorsArray = array as? [[String : String]] ?? []
         case .failure(_):
           print("Couldn't download flavors!")
           return
         }
         
-        // 4
-        strongSelf.flavors = strongSelf.flavorFactory.flavorsFromDictionaryArray(array: flavorsArray)
+        strongSelf.flavors = flavorsArray.compactMap(Flavor.init(dictionary:))
         strongSelf.collectionView.reloadData()
         strongSelf.selectFirstFlavor()
     }
@@ -110,7 +98,6 @@ public class PickFlavorViewController: UIViewController {
   }
   
   private func selectFirstFlavor() {
-    
     if let flavor = flavors.first {
       updateWithFlavor(flavor)
     }
@@ -121,7 +108,6 @@ public class PickFlavorViewController: UIViewController {
   // MARK: Internal
   
   private func updateWithFlavor(_ flavor: Flavor) {
-    
     iceCreamView.updateWithFlavor(flavor)
     label.text = flavor.name
   }

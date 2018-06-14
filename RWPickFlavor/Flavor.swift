@@ -69,11 +69,9 @@ struct Flavor {
     self.topColor = topColor
     self.bottomColor = bottomColor
     self.name = name
-    
   }
 }
 
 protocol FlavorAdapter {
-  
   func updateWithFlavor(_: Flavor)
 }

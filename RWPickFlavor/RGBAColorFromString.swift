@@ -41,26 +41,25 @@ extension UIColor {
   
   class func RGBAColorFromString(string: String?) -> UIColor? {
     
-    if let string = string {
-      
-      var components = (string as NSString).components(separatedBy: ",") as [NSString]
-      
-      if components.count == 3 {
-        components.append("1.0")
-      }
-      
-      if components.count != 4 {
-        return nil
-      }
-      
-      let red = CGFloat(components[0].floatValue / 255)
-      let green = CGFloat(components[1].floatValue / 255)
-      let blue = CGFloat(components[2].floatValue / 255)
-      let alpha = CGFloat(components[3].floatValue / 255)
-      
-      return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    guard let string = string else {
+      return nil
     }
     
-    return nil
+    var components = string.split(separator: ",").map(String.init)
+    
+    if components.count == 3 {
+      components.append("1.0")
+    }
+    
+    guard components.count == 4 else {
+      return nil
+    }
+    
+    let red = CGFloat((Float(components[0]) ?? 0) / 255)
+    let green = CGFloat((Float(components[1]) ?? 0) / 255)
+    let blue = CGFloat((Float(components[2]) ?? 0) / 255)
+    let alpha = CGFloat((Float(components[3]) ?? 0) / 255)
+    
+    return UIColor(red: red, green: green, blue: blue, alpha: alpha)
   }
 }
