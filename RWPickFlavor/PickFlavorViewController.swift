@@ -28,7 +28,6 @@
 
 import UIKit
 import Alamofire
-import MBProgressHUD
 
 public class PickFlavorViewController: UIViewController {
   
@@ -44,6 +43,8 @@ public class PickFlavorViewController: UIViewController {
     return collectionView?.dataSource as? PickFlavorDataSource
   }
   
+  private let loadingIndactor = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+  
   // MARK: Outlets
   
   @IBOutlet var contentView: UIView!
@@ -55,12 +56,15 @@ public class PickFlavorViewController: UIViewController {
   
   public override func viewDidLoad() {
     super.viewDidLoad()
+    view.addSubview(loadingIndactor)
+    loadingIndactor.center = view.center
+    loadingIndactor.hidesWhenStopped = true
     loadFlavors()
   }
   
   private func loadFlavors() {
     
-    showLoadingHUD()
+    showLoadingIndicator()
     
     Alamofire.request("http://www.raywenderlich.com/downloads/Flavors.plist",
                       encoding: PropertyListEncoding.xml)
@@ -70,13 +74,13 @@ public class PickFlavorViewController: UIViewController {
           return
         }
         
-        strongSelf.hideLoadingHUD()
+        strongSelf.hideLoadingIndicator()
         
         let flavorsArray: [[String : String]]
         
         switch response.result {
         case .success(let array):
-            flavorsArray = array as? [[String : String]] ?? []
+          flavorsArray = array as? [[String : String]] ?? []
         case .failure(_):
           print("Couldn't download flavors!")
           return
@@ -88,13 +92,12 @@ public class PickFlavorViewController: UIViewController {
     }
   }
   
-  private func showLoadingHUD() {
-    let hud = MBProgressHUD.showAdded(to: contentView, animated: true)
-    hud.label.text = "Loading..."
+  private func showLoadingIndicator() {
+    loadingIndactor.startAnimating()
   }
   
-  private func hideLoadingHUD() {
-    MBProgressHUD.hide(for: contentView, animated: true)
+  private func hideLoadingIndicator() {
+    loadingIndactor.stopAnimating()
   }
   
   private func selectFirstFlavor() {
@@ -102,8 +105,6 @@ public class PickFlavorViewController: UIViewController {
       updateWithFlavor(flavor)
     }
   }
-  
-  
   
   // MARK: Internal
   

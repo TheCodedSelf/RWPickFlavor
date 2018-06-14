@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		1AE180DAF7E358E3AE64E56F /* Pods_RWPickFlavor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A1D69F62771B698DE8C650 /* Pods_RWPickFlavor.framework */; };
 		42619BF91BEC3021007ECDAF /* RGBAColorFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619BF81BEC3021007ECDAF /* RGBAColorFromString.swift */; };
-		42619BFB1BEC3026007ECDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619BFA1BEC3026007ECDAF /* AppDelegate.swift */; };
 		42619BFD1BEC3029007ECDAF /* PickFlavorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619BFC1BEC3029007ECDAF /* PickFlavorDataSource.swift */; };
 		42619BFF1BEC302D007ECDAF /* PickFlavorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619BFE1BEC302D007ECDAF /* PickFlavorViewController.swift */; };
-		42619C011BEC302F007ECDAF /* FlavorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619C001BEC302F007ECDAF /* FlavorFactory.swift */; };
 		42619C031BEC3032007ECDAF /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619C021BEC3032007ECDAF /* Flavor.swift */; };
 		42619C051BEC303A007ECDAF /* IceCreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619C041BEC303A007ECDAF /* IceCreamView.swift */; };
 		42619C071BEC303D007ECDAF /* ScoopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619C061BEC303D007ECDAF /* ScoopCell.swift */; };
@@ -37,10 +35,8 @@
 /* Begin PBXFileReference section */
 		2D4A85A8BEAC987B2EF770A8 /* Pods-RWPickFlavor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RWPickFlavor.release.xcconfig"; path = "Pods/Target Support Files/Pods-RWPickFlavor/Pods-RWPickFlavor.release.xcconfig"; sourceTree = "<group>"; };
 		42619BF81BEC3021007ECDAF /* RGBAColorFromString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBAColorFromString.swift; sourceTree = "<group>"; };
-		42619BFA1BEC3026007ECDAF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42619BFC1BEC3029007ECDAF /* PickFlavorDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickFlavorDataSource.swift; sourceTree = "<group>"; };
 		42619BFE1BEC302D007ECDAF /* PickFlavorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickFlavorViewController.swift; sourceTree = "<group>"; };
-		42619C001BEC302F007ECDAF /* FlavorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorFactory.swift; sourceTree = "<group>"; };
 		42619C021BEC3032007ECDAF /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		42619C041BEC303A007ECDAF /* IceCreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IceCreamView.swift; sourceTree = "<group>"; };
 		42619C061BEC303D007ECDAF /* ScoopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoopCell.swift; sourceTree = "<group>"; };
@@ -104,7 +100,6 @@
 		424871601BEC2E6200CA3504 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				42619BFA1BEC3026007ECDAF /* AppDelegate.swift */,
 				42619BFC1BEC3029007ECDAF /* PickFlavorDataSource.swift */,
 				42619BFE1BEC302D007ECDAF /* PickFlavorViewController.swift */,
 			);
@@ -114,7 +109,6 @@
 		424871611BEC2E6600CA3504 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				42619C001BEC302F007ECDAF /* FlavorFactory.swift */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -339,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42619BFB1BEC3026007ECDAF /* AppDelegate.swift in Sources */,
 				42619BFF1BEC302D007ECDAF /* PickFlavorViewController.swift in Sources */,
 				42619BFD1BEC3029007ECDAF /* PickFlavorDataSource.swift in Sources */,
 				42619C051BEC303A007ECDAF /* IceCreamView.swift in Sources */,
@@ -347,7 +340,6 @@
 				42619C091BEC3040007ECDAF /* ScoopView.swift in Sources */,
 				42619BF91BEC3021007ECDAF /* RGBAColorFromString.swift in Sources */,
 				42619C071BEC303D007ECDAF /* ScoopCell.swift in Sources */,
-				42619C011BEC302F007ECDAF /* FlavorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
