@@ -85,7 +85,7 @@ class IceCreamView: UIView {
     conePath.lineJoinStyle = CGLineJoin.round;
     
     context.saveGState()
-    context.setShadow(offset: coneOuterShadowOffset, blur: coneOuterShadowBlurRadius, color: (coneOuterShadow as UIColor).cgColor)
+    context.setShadow(offset: coneOuterShadowOffset, blur: coneOuterShadowBlurRadius, color: coneOuterShadow.cgColor)
     coneInnerColor.setFill()
     conePath.fill()
     
@@ -93,10 +93,10 @@ class IceCreamView: UIView {
     context.saveGState()
     context.clip(to: conePath.bounds)
     context.setShadow(offset: CGSize(width: 0, height: 0), blur: 0)
-    context.setAlpha((coneInnerShadow as UIColor).cgColor.alpha)
+    context.setAlpha(coneInnerShadow.cgColor.alpha)
     context.beginTransparencyLayer(auxiliaryInfo: nil)
-    let coneOpaqueShadow = (coneInnerShadow as UIColor).withAlphaComponent(1)
-    context.setShadow(offset: coneInnerShadowOffset, blur: coneInnerShadowBlurRadius, color: (coneOpaqueShadow as UIColor).cgColor)
+    let coneOpaqueShadow = coneInnerShadow.withAlphaComponent(1)
+    context.setShadow(offset: coneInnerShadowOffset, blur: coneInnerShadowBlurRadius, color: coneOpaqueShadow.cgColor)
     context.setBlendMode(CGBlendMode.sourceOut)
     context.beginTransparencyLayer(auxiliaryInfo: nil)
     
@@ -255,7 +255,7 @@ class IceCreamView: UIView {
     scoopPath.addCurve(to: CGPoint(x: frame.minX + 0.39216 * frame.width, y: frame.minY + 0.35149 * frame.height), controlPoint1: CGPoint(x: frame.minX + 0.36275 * frame.width, y: frame.minY + 0.40099 * frame.height), controlPoint2: CGPoint(x: frame.minX + 0.35294 * frame.width, y: frame.minY + 0.35149 * frame.height))
     scoopPath.close()
     context.saveGState()
-    context.setShadow(offset: scoopShadowOffset, blur: scoopShadowBlurRadius, color: (scoopShadow as UIColor).cgColor)
+    context.setShadow(offset: scoopShadowOffset, blur: scoopShadowBlurRadius, color: scoopShadow.cgColor)
     
     context.beginTransparencyLayer(auxiliaryInfo: nil)
     scoopPath.addClip()
