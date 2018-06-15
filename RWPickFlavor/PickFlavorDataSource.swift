@@ -38,7 +38,7 @@ class PickFlavorDataSource: NSObject {
   
   // MARK: Instance Variables
   
-  var flavors = [Flavor]()
+  var flavors: [Flavor] = []
   
   // MARK: Outlets
   

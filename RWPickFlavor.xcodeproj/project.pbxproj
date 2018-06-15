@@ -16,21 +16,9 @@
 		42619C091BEC3040007ECDAF /* ScoopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42619C081BEC3040007ECDAF /* ScoopView.swift */; };
 		42619C0B1BEC3478007ECDAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42619C0A1BEC3478007ECDAF /* Main.storyboard */; };
 		42B426AF1BEC2BDC00186FD5 /* RWPickFlavor.h in Headers */ = {isa = PBXBuildFile; fileRef = 42B426AE1BEC2BDC00186FD5 /* RWPickFlavor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42B426B61BEC2BDC00186FD5 /* RWPickFlavor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B426AB1BEC2BDC00186FD5 /* RWPickFlavor.framework */; };
-		42B426BB1BEC2BDC00186FD5 /* RWPickFlavorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B426BA1BEC2BDC00186FD5 /* RWPickFlavorTests.swift */; };
 		549322DEBDAD650AFACA9257 /* libPods-RWPickFlavor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 311EDC836B56CD4C610C5E55 /* libPods-RWPickFlavor.a */; };
 		951B8AA220CE5BCB00476AF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951B8AA120CE5BCB00476AF6 /* Images.xcassets */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		42B426B71BEC2BDC00186FD5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42B426A21BEC2BDC00186FD5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42B426AA1BEC2BDC00186FD5;
-			remoteInfo = RWPickFlavor;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2D4A85A8BEAC987B2EF770A8 /* Pods-RWPickFlavor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RWPickFlavor.release.xcconfig"; path = "Pods/Target Support Files/Pods-RWPickFlavor/Pods-RWPickFlavor.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,9 +34,6 @@
 		42B426AB1BEC2BDC00186FD5 /* RWPickFlavor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RWPickFlavor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B426AE1BEC2BDC00186FD5 /* RWPickFlavor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWPickFlavor.h; sourceTree = "<group>"; };
 		42B426B01BEC2BDC00186FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42B426B51BEC2BDC00186FD5 /* RWPickFlavorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RWPickFlavorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		42B426BA1BEC2BDC00186FD5 /* RWPickFlavorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWPickFlavorTests.swift; sourceTree = "<group>"; };
-		42B426BC1BEC2BDC00186FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		951B8AA120CE5BCB00476AF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A88D65FBA87CDDD056F243FE /* Pods-RWPickFlavor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RWPickFlavor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RWPickFlavor/Pods-RWPickFlavor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,14 +44,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				549322DEBDAD650AFACA9257 /* libPods-RWPickFlavor.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		42B426B21BEC2BDC00186FD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42B426B61BEC2BDC00186FD5 /* RWPickFlavor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				42B426AD1BEC2BDC00186FD5 /* RWPickFlavor */,
-				42B426B91BEC2BDC00186FD5 /* RWPickFlavorTests */,
 				42B426AC1BEC2BDC00186FD5 /* Products */,
 				CCE7810EB3B6F7A28FC1DDBD /* Pods */,
 				3BDD0B3C5E9ACAF80DFC80AC /* Frameworks */,
@@ -163,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				42B426AB1BEC2BDC00186FD5 /* RWPickFlavor.framework */,
-				42B426B51BEC2BDC00186FD5 /* RWPickFlavorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,15 +156,6 @@
 				42B426B01BEC2BDC00186FD5 /* Info.plist */,
 			);
 			path = RWPickFlavor;
-			sourceTree = "<group>";
-		};
-		42B426B91BEC2BDC00186FD5 /* RWPickFlavorTests */ = {
-			isa = PBXGroup;
-			children = (
-				42B426BA1BEC2BDC00186FD5 /* RWPickFlavorTests.swift */,
-				42B426BC1BEC2BDC00186FD5 /* Info.plist */,
-			);
-			path = RWPickFlavorTests;
 			sourceTree = "<group>";
 		};
 		CCE7810EB3B6F7A28FC1DDBD /* Pods */ = {
@@ -234,24 +200,6 @@
 			productReference = 42B426AB1BEC2BDC00186FD5 /* RWPickFlavor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		42B426B41BEC2BDC00186FD5 /* RWPickFlavorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 42B426C21BEC2BDC00186FD5 /* Build configuration list for PBXNativeTarget "RWPickFlavorTests" */;
-			buildPhases = (
-				42B426B11BEC2BDC00186FD5 /* Sources */,
-				42B426B21BEC2BDC00186FD5 /* Frameworks */,
-				42B426B31BEC2BDC00186FD5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				42B426B81BEC2BDC00186FD5 /* PBXTargetDependency */,
-			);
-			name = RWPickFlavorTests;
-			productName = RWPickFlavorTests;
-			productReference = 42B426B51BEC2BDC00186FD5 /* RWPickFlavorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -263,9 +211,6 @@
 				ORGANIZATIONNAME = "Ray Wenderlich";
 				TargetAttributes = {
 					42B426AA1BEC2BDC00186FD5 = {
-						CreatedOnToolsVersion = 7.1;
-					};
-					42B426B41BEC2BDC00186FD5 = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
@@ -283,7 +228,6 @@
 			projectRoot = "";
 			targets = (
 				42B426AA1BEC2BDC00186FD5 /* RWPickFlavor */,
-				42B426B41BEC2BDC00186FD5 /* RWPickFlavorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -295,13 +239,6 @@
 			files = (
 				951B8AA220CE5BCB00476AF6 /* Images.xcassets in Resources */,
 				42619C0B1BEC3478007ECDAF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		42B426B31BEC2BDC00186FD5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,23 +280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42B426B11BEC2BDC00186FD5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42B426BB1BEC2BDC00186FD5 /* RWPickFlavorTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		42B426B81BEC2BDC00186FD5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 42B426AA1BEC2BDC00186FD5 /* RWPickFlavor */;
-			targetProxy = 42B426B71BEC2BDC00186FD5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		42B426BD1BEC2BDC00186FD5 /* Debug */ = {
@@ -517,26 +438,6 @@
 			};
 			name = Release;
 		};
-		42B426C31BEC2BDC00186FD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RWPickFlavorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RWPickFlavorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		42B426C41BEC2BDC00186FD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RWPickFlavorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RWPickFlavorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -554,15 +455,6 @@
 			buildConfigurations = (
 				42B426C01BEC2BDC00186FD5 /* Debug */,
 				42B426C11BEC2BDC00186FD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		42B426C21BEC2BDC00186FD5 /* Build configuration list for PBXNativeTarget "RWPickFlavorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				42B426C31BEC2BDC00186FD5 /* Debug */,
-				42B426C41BEC2BDC00186FD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
