@@ -51,7 +51,7 @@ class PickFlavorDataSource: NSObject {
     guard let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: Identifiers.ScoopCell, for: indexPath) as? ScoopCell
       else {
-      return UICollectionViewCell()
+        return UICollectionViewCell()
     }
     configureScoopCell(cell: cell, atIndexPath: indexPath)
     return cell
@@ -65,7 +65,7 @@ class PickFlavorDataSource: NSObject {
   
 }
 
-  // MARK: UICollectionViewDataSource
+// MARK: UICollectionViewDataSource
 extension PickFlavorDataSource: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView,
                       numberOfItemsInSection section: Int) -> Int {
