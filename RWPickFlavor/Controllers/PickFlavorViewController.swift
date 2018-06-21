@@ -55,6 +55,7 @@ public class PickFlavorViewController: UIViewController {
   
   public override func viewDidLoad() {
     super.viewDidLoad()
+    collectionView.delegate = self
     loadFlavors()
   }
   
